@@ -34,7 +34,7 @@
 
 - [ ] Create chatbot UI (chat window HTML/CSS)
 - [ ] Add JavaScript for chat interactions
-- [ ] Create a file with your CV data (cv_data.txt or cv_data.json)
+- [ ] Create a file with CV data (cv_data.txt or cv_data.json)
 - [ ] Get OpenAI API key (or choose another AI service)
 - [ ] Update .env file with API key
 - [ ] Implement chatbot backend in app.py
@@ -42,7 +42,7 @@
 
 ## Phase 5: Content & Data
 
-- [ ] Write your bio and personal statement
+- [ ] Write bio and personal statement
 - [ ] List all work experiences with dates, roles, responsibilities
 - [ ] Document all projects (title, description, technologies, GitHub links, live demos)
 - [ ] List technical skills by category (languages, frameworks, tools, databases)
