@@ -19,7 +19,7 @@ window.addEventListener("mousemove", function (event) {
   mouse.y = event.y;
 });
 
-// Particle class
+// Particle class with colorful gradients
 class Particle {
   constructor(x, y) {
     this.x = x;
@@ -31,7 +31,22 @@ class Particle {
   }
 
   draw() {
-    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+    // Create gradient for colorful effect
+    const gradient = ctx.createRadialGradient(
+      this.x,
+      this.y,
+      0,
+      this.x,
+      this.y,
+      this.size * 2
+    );
+    gradient.addColorStop(0, "rgba(0, 212, 255, 0.8)");
+    gradient.addColorStop(0.5, "rgba(123, 47, 247, 0.6)");
+    gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+    ctx.fillStyle = gradient;
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = "rgba(0, 212, 255, 0.5)";
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.closePath();
@@ -76,13 +91,38 @@ function init() {
   }
 }
 
+// Connect nearby particles with lines
+function connectParticles() {
+  for (let i = 0; i < particlesArray.length; i++) {
+    for (let j = i + 1; j < particlesArray.length; j++) {
+      let dx = particlesArray[i].x - particlesArray[j].x;
+      let dy = particlesArray[i].y - particlesArray[j].y;
+      let distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 120) {
+        ctx.strokeStyle = `rgba(0, 212, 255, ${(1 - distance / 120) * 0.15})`;
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
+        ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+}
+
 // Animation loop
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.shadowBlur = 0;
+
+  connectParticles();
+
   for (let i = 0; i < particlesArray.length; i++) {
-    particlesArray[i].draw();
     particlesArray[i].update();
+    particlesArray[i].draw();
   }
+
   requestAnimationFrame(animate);
 }
 

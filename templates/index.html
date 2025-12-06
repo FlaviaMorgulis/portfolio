@@ -1,14 +1,25 @@
 {% extends "base.html" %} {% block title %}Home - My Portfolio{% endblock %} {%
 block content %}
 <canvas id="particleCanvas"></canvas>
+
 <div class="hero-content">
   <h1>Welcome to My Portfolio</h1>
-  <p>Hi! I'm [Your Name], a [Your Title/Role].</p>
+
+  <!-- 3D Spiral -->
+  <div class="spiral-container">
+    <div class="spiral"></div>
+  </div>
+
   <p>
-    This is my portfolio website where you can learn about my experience,
-    projects, and skills.
+    Hi! I'm Flavia, a Software Engineer passionate about building innovative
+    solutions.
+  </p>
+  <p>
+    💬 Click the chat button to ask my AI assistant anything about my
+    experiences, projects, and skills!
   </p>
 </div>
 
 <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+<script src="{{ url_for('static', filename='js/spiral.js') }}"></script>
 {% endblock %}

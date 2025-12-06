@@ -1,13 +1,30 @@
 {% extends "base.html" %} {% block title %}About - My Portfolio{% endblock %} {%
 block content %}
-<h1>About Me</h1>
-<p>
-  Write your bio here - who you are, what you do, what you're passionate about.
-</p>
+<canvas id="constellation-canvas"></canvas>
 
-<h2>Education</h2>
-<p>Your degree, university, graduation year</p>
+<div class="about-content">
+  <h1>About Me</h1>
+  <p>
+    Multilingual technology professional with a strong foundation in project
+    management, software development, and customer-focused service delivery. I
+    bring experience leading small technical teams, coordinating workflows, and
+    translating user and business requirements into clear, actionable technical
+    outputs. My background in business operations, digital systems, and user
+    engagement enables me to approach projects with both analytical rigor and
+    human-centered thinking. I am adept at supporting cross-functional
+    collaboration, ensuring alignment between technical teams, stakeholders, and
+    end users to deliver solutions that are accessible, efficient, and
+    impactful. Recognised for structured problem-solving, clear communication,
+    and adaptability within fast-moving environments, I am committed to
+    learning, continuous improvement, and inclusive practices.
+  </p>
 
-<h2>Interests</h2>
-<p>What you enjoy doing, learning, building</p>
+  <h2>Education</h2>
+  <p>Blablabla Blablabla</p>
+
+  <h2>Interests</h2>
+  <p>Blablabla Blablabla</p>
+</div>
+
+<script src="{{ url_for('static', filename='js/constellation.js') }}"></script>
 {% endblock %}
