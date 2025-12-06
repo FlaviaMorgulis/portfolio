@@ -1,11 +1,12 @@
 {% extends "base.html" %} {% block title %}Skills - My Portfolio{% endblock %}
 {% block content %}
+<canvas id="fibonacci-rectangles-canvas"></canvas>
+
 <div class="skills-content">
-  <h1 id="typewriter-title"></h1>
-  <div class="cursor"></div>
+  <h1 id="typewriter"></h1>
 
   <h2>Programming Languages</h2>
-  <p>Python, JavaScript, Java, etc.</p>
+  <p>Python, JavaScript, Java, etc</p>
 
   <h2>Frameworks & Libraries</h2>
   <p>Flask, React, Django, etc.</p>
@@ -17,5 +18,6 @@
   <p>MySQL, PostgreSQL, MongoDB, etc.</p>
 </div>
 
+<script src="{{ url_for('static', filename='js/fibonacci-rectangles.js') }}"></script>
 <script src="{{ url_for('static', filename='js/typewriter.js') }}"></script>
 {% endblock %}

@@ -50,11 +50,22 @@ class Particle {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
 
-    // Rainbow gradient colors
+    // Gold to rainbow gradient colors (starts with more gold)
     const hue = (this.index * 3 + time * 20) % 360;
-    const r = Math.sin((hue * Math.PI) / 180) * 127 + 128;
-    const g = Math.sin(((hue + 120) * Math.PI) / 180) * 127 + 128;
-    const b = Math.sin(((hue + 240) * Math.PI) / 180) * 127 + 128;
+
+    // Increase gold/yellow presence in the spectrum
+    let r, g, b;
+    if (hue < 60) {
+      // Gold/yellow range (0-60°)
+      r = 255;
+      g = 200 + Math.sin((hue * Math.PI) / 60) * 55;
+      b = 50;
+    } else {
+      // Rainbow for the rest
+      r = Math.sin((hue * Math.PI) / 180) * 127 + 128;
+      g = Math.sin(((hue + 120) * Math.PI) / 180) * 127 + 128;
+      b = Math.sin(((hue + 240) * Math.PI) / 180) * 127 + 128;
+    }
 
     ctx.fillStyle = `rgba(${r}, ${g}, ${b}, 0.8)`;
     ctx.shadowBlur = 15;
