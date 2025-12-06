@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Contact - My Portfolio{% endblock %}
+{% block content %}
+<h1>Get In Touch</h1>
+
+<p>I'd love to hear from you! Feel free to reach out.</p>
+
+<h2>Contact Information</h2>
+<p>Email: your.email@example.com</p>
+<p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
+<p>GitHub: <a href="#">Your GitHub Profile</a></p>
+
+<h2>Send a Message</h2>
+<form>
+  <label>Name:</label><br />
+  <input type="text" name="name" required /><br /><br />
+
+  <label>Email:</label><br />
+  <input type="email" name="email" required /><br /><br />
+
+  <label>Message:</label><br />
+  <textarea name="message" rows="5" required></textarea><br /><br />
+
+  <button type="submit">Send</button>
+</form>
+{% endblock %}

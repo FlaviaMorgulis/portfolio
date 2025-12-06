@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Portfolio{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('experience') }}">Experience</a></li>
+        <li><a href="{{ url_for('projects') }}">Projects</a></li>
+        <li><a href="{{ url_for('skills') }}">Skills</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div id="chatWidget">
+      <button id="chatButton" aria-label="Open chat">
+        <span class="chat-icon">💬</span>
+      </button>
+
+      <div id="chatWindow" class="chat-hidden">
+        <div class="chat-header">
+          <h3>Ask me anything!</h3>
+          <button id="closeChat" aria-label="Close chat">&times;</button>
+        </div>
+
+        <div id="chatMessages" class="chat-messages">
+          <div class="bot-message">
+            <p>
+              Hi! I'm an AI assistant trained on my portfolio. Ask me about my
+              experience, skills, or projects!
+            </p>
+          </div>
+        </div>
+
+        <div class="chat-input-container">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Type your question..."
+          />
+          <button id="sendMessage">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  </body>
+</html>
