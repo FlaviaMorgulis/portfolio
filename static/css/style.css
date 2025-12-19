@@ -67,11 +67,15 @@ body {
 nav {
   background: rgba(10, 14, 39, 0.95);
   backdrop-filter: blur(10px);
-  padding: 18px 0;
+  padding: 18px 30px;
   position: sticky;
   top: 0;
   z-index: 100;
   box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 nav ul {
@@ -80,6 +84,34 @@ nav ul {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+}
+
+.social-links {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px 8px 8px;
+}
+
+.social-links a:hover {
+  color: #00d4ff;
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
 }
 
 nav a {
@@ -1059,10 +1091,11 @@ footer {
 
 .experience-content {
   position: relative;
-  z-index: 1;
-  padding: 80px 50px 50px;
-  max-width: 1100px;
+  z-index: 2;
+  padding: 80px 20px 50px;
+  max-width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1110,7 +1143,7 @@ footer {
   transform: translateY(-50%);
   padding: 40px;
   max-width: 500px;
-  z-index: 1;
+  z-index: 2;
   text-align: left;
 }
 

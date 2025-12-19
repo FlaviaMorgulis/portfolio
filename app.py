@@ -13,11 +13,6 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/experience')
-def experience():
-    return render_template('experience.html')
-
-
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
@@ -44,8 +39,8 @@ def contact():
         print(f"Subject: {subject}")
         print(f"Message: {message}")
 
-        # You could also save to a database here
-        # Or send an email notification to yourself
+        # Could also save to a database here
+        # Or send an email notification to myself
 
         return render_template('contact.html', success=True)
 
