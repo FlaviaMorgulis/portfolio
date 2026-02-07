@@ -1,4 +1,4 @@
-# Portfolio Website with AI Chatbot - Build Plan to be updated with architecture plan, UI prototype 
+# Portfolio Website with AI Chatbot - Build Plan to be updated with architecture plan, UI prototype
 
 ## Phase 1: Basic Setup ✓
 

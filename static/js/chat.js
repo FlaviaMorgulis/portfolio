@@ -134,7 +134,7 @@ chatInput.addEventListener("keypress", (e) => {
 voiceButton.addEventListener("click", () => {
   if (!recognition) {
     alert(
-      "Speech recognition is not supported in this browser. Please use Chrome or Edge."
+      "Speech recognition is not supported in this browser. Please use Chrome or Edge.",
     );
     return;
   }
@@ -172,18 +172,25 @@ function speakText(text) {
   window.speechSynthesis.cancel();
 
   const utterance = new SpeechSynthesisUtterance(text);
-  utterance.rate = 1.0;
+  utterance.rate = 0.95;
   utterance.pitch = 1.0;
   utterance.volume = 1.0;
 
-  // Try to use a natural-sounding voice if available
+  // Try to use a British female voice
   const voices = window.speechSynthesis.getVoices();
   const preferredVoice =
     voices.find(
       (voice) =>
+        voice.lang.startsWith("en-GB") &&
+        voice.name.toLowerCase().includes("female"),
+    ) ||
+    voices.find((voice) => voice.lang.startsWith("en-GB")) ||
+    voices.find(
+      (voice) =>
         voice.lang.startsWith("en") &&
-        (voice.name.includes("Google") || voice.name.includes("Natural"))
-    ) || voices.find((voice) => voice.lang.startsWith("en"));
+        voice.name.toLowerCase().includes("female"),
+    ) ||
+    voices.find((voice) => voice.lang.startsWith("en"));
 
   if (preferredVoice) {
     utterance.voice = preferredVoice;

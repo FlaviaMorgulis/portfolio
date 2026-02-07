@@ -6,8 +6,14 @@
 }
 
 body {
-  font-family: "Inter", "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", sans-serif;
+  font-family:
+    "Inter",
+    "Poppins",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
   background-color: #0a0e27;
   color: #eee;
   overflow-x: hidden;
@@ -49,7 +55,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: glow 2s ease-in-out infinite alternate,
+  animation:
+    glow 2s ease-in-out infinite alternate,
     float3D 6s ease-in-out infinite;
   transform-style: preserve-3d;
   text-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
@@ -607,14 +614,16 @@ footer {
 .spiral-ring.cyan {
   border-top-color: #00d4ff;
   border-right-color: #00d4ff;
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6),
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.6),
     inset 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
 .spiral-ring.purple {
   border-top-color: #7b2ff7;
   border-right-color: #7b2ff7;
-  box-shadow: 0 0 20px rgba(123, 47, 247, 0.6),
+  box-shadow:
+    0 0 20px rgba(123, 47, 247, 0.6),
     inset 0 0 20px rgba(123, 47, 247, 0.3);
 }
 
@@ -900,7 +909,8 @@ footer {
 
 .submit-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6),
+  box-shadow:
+    0 8px 25px rgba(0, 212, 255, 0.6),
     0 0 30px rgba(123, 47, 247, 0.4);
 }
 
@@ -918,7 +928,9 @@ footer {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+  transition:
+    width 0.6s,
+    height 0.6s;
 }
 
 .submit-btn:hover .btn-glow {
@@ -926,11 +938,12 @@ footer {
   height: 300px;
 }
 
-.social-links {
+.contact-container .social-links {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
+  position: static;
 }
 
 .social-link {
@@ -968,7 +981,8 @@ footer {
     rgba(0, 212, 255, 0.25),
     rgba(123, 47, 247, 0.25)
   );
-  box-shadow: 0 5px 25px rgba(0, 212, 255, 0.4),
+  box-shadow:
+    0 5px 25px rgba(0, 212, 255, 0.4),
     0 0 20px rgba(123, 47, 247, 0.3);
 }
 
@@ -1491,7 +1505,8 @@ footer {
 
 .project-card-container:hover .project-card-front,
 .project-card-container:hover .project-card-back {
-  box-shadow: 0 15px 45px 0 rgba(0, 212, 255, 0.35),
+  box-shadow:
+    0 15px 45px 0 rgba(0, 212, 255, 0.35),
     0 0 30px 0 rgba(123, 47, 247, 0.2);
   border-color: rgba(0, 212, 255, 0.4);
 }

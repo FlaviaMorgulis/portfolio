@@ -1,0 +1,122 @@
+{
+  "name": "Flavia Morgulis",
+  "title": "Tech-Driven Project Manager & Full Stack Developer",
+  "bio": "Tech-driven multilingual professional combining project management, coding, DevOps, and cloud computing expertise to deliver user-focused solutions. Experienced in business startup, operations, product management, and customer-facing roles. Currently pursuing AWS Restart certification. Recognised for analytical thinking, creative problem-solving, and translating business requirements into technical deliverables. Collaborative and adaptable, bridging technical and non-technical teams to ensure clarity, efficiency, and impact.",
+  "experience": [
+    {
+      "company": "Group Dynamics",
+      "role": "Manager and Founder",
+      "duration": "2023 - 2024",
+      "description": "Established and grew a successful well-being practice focused on meditation and mindfulness. Developed efficient administrative and office processes and procedures, including client onboarding, marketing, diary scheduling, billing, invoicing, and accounting."
+    },
+    {
+      "company": "Ruter Public Transport",
+      "role": "Customer Service Advisor",
+      "duration": "2022 - 2023",
+      "description": "Worked in a fast-paced contact centre providing advice about services and resolving customer issues. Collaborated with IT to improve system performance and integrate 4 systems. Designed processes for a new customer mobility service. Wrote weekly reports for management providing data and insights on customer complaints and IT improvements. Selected to train new employees."
+    },
+    {
+      "company": "ISS A/S",
+      "role": "Customer Service and Administration Officer",
+      "duration": "2019 - 2021",
+      "description": "Worked in the catering facility at Norway's busiest hospital. Handled customer service, commercial target achievement and supporting administration. Mapped and streamlined operational processes. Assisted manager in winning a 7-year tender by creating detailed reports using multiple sources of data."
+    },
+    {
+      "company": "Furu Creamery",
+      "role": "Founder and Manager",
+      "duration": "2017 - 2019",
+      "description": "Identified market opportunity for plant-based cheese and conducted market research. Developed and implemented ingredient sourcing, product and marketing strategy. Negotiated B2B and B2C sales contracts in Norway and Sweden. Created policies to comply with food production regulations. Managed budgets and coordinated marketing and social media plans."
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "SQL", "HTML", "CSS", "JavaScript"],
+    "frameworks": ["Flask", "SQLAlchemy", "Jinja"],
+    "tools": [
+      "Git",
+      "GitHub",
+      "GitHub Projects",
+      "Agile tools",
+      "Docker",
+      "AWS",
+      "Microsoft Office Suite",
+      "CRM systems"
+    ],
+    "databases": ["SQL", "SQLAlchemy ORM"],
+    "specializations": [
+      "DevOps",
+      "Cloud Computing",
+      "Product Management",
+      "Project Management",
+      "Full-Stack Development"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Linux DevOps Python Platform",
+      "description": "Currently under construction. A comprehensive DevOps platform combining Linux, Python, and cloud infrastructure automation. This project demonstrates modern DevOps practices, infrastructure as code, CI/CD pipelines, containerization, and cloud deployment strategies. Focused on building scalable, automated solutions for infrastructure management and application deployment.",
+      "technologies": ["Python", "Linux", "Docker", "AWS", "CI/CD", "DevOps"],
+      "github": "https://github.com/FlaviaMorgulis/linux-devops-python-platform",
+      "demo": ""
+    },
+    {
+      "title": "System Monitoring & Log Analysis Tool",
+      "description": "Python tool for real-time Linux system monitoring and log analysis. Tracks CPU, memory, disk, and network metrics with alert systems for anomalies. Features intelligent pattern detection in logs, anomaly alerts, and a Flask web dashboard for visualizing system health and metrics. Demonstrates strong Python skills, Linux system administration knowledge, and data analysis capabilities.",
+      "technologies": [
+        "Python",
+        "Linux",
+        "Flask",
+        "Data Analysis",
+        "System Administration"
+      ],
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Financial Tracking App",
+      "description": "Led a small team of developers in designing and implementing a financial tracking web application using Agile methodology. Designed and implemented the database schema using SQLAlchemy, defining data models, relationships, and integration with Flask backend APIs. Contributed to front-end development with HTML, CSS, and JavaScript, ensuring seamless data flow between client and server. Built a secure, user-friendly, and scalable application demonstrating full-stack development principles.",
+      "technologies": [
+        "Flask",
+        "SQLAlchemy",
+        "Jinja",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "SQL"
+      ],
+      "github": "https://github.com/FlaviaMorgulis/financial-tracking-app",
+      "demo": ""
+    }
+  ],
+  "education": [
+    {
+      "school": "AWS",
+      "degree": "AWS Restart Program",
+      "field": "Cloud Computing & DevOps",
+      "graduationYear": 2026
+    },
+    {
+      "school": "NCFE",
+      "degree": "Level 3 in Coding Practices",
+      "field": "Computer Science",
+      "graduationYear": 2025
+    },
+    {
+      "school": "NCFE",
+      "degree": "Level 2 in Understanding Coding",
+      "field": "Computer Science",
+      "graduationYear": 2024
+    },
+    {
+      "school": "Oslo Education Institution",
+      "degree": "Diploma",
+      "field": "Business Administration",
+      "graduationYear": 2019
+    }
+  ],
+  "contact": {
+    "email": "flaviaefmorgulis@gmail.com",
+    "phone": "+447783085438",
+    "linkedin": "https://www.linkedin.com/in/flavia-morgulis-418579221/",
+    "github": "https://github.com/FlaviaMorgulis"
+  }
+}
