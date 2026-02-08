@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from flask_mail import Mail, Message
 from openai import OpenAI
 import json
 import os
@@ -9,16 +8,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-
-# Configure Flask-Mail
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = os.getenv('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
-app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_USER')
-
-mail = Mail(app)
 
 # Initialize OpenAI client
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
@@ -74,57 +63,6 @@ def projects():
 @app.route('/skills')
 def skills():
     return render_template('skills.html')
-
-
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-    if request.method == 'POST':
-        name = request.form.get('name')
-        email = request.form.get('email')
-        subject = request.form.get('subject')
-        message = request.form.get('message')
-
-        try:
-            # Send email to yourself
-            msg = Message(
-                subject=f"New Contact Form Submission: {subject}",
-                recipients=[os.getenv('EMAIL_USER')],
-                body=f"""
-New contact form submission:
-
-Name: {name}
-Email: {email}
-Subject: {subject}
-
-Message:
-{message}
-                """
-            )
-            mail.send(msg)
-
-            # Send confirmation email to the user
-            confirmation_msg = Message(
-                subject="I received your message!",
-                recipients=[email],
-                body=f"""
-Hi {name},
-
-Thank you for reaching out! I received your message and will get back to you soon.
-
-Best regards,
-Flavia
-                """
-            )
-            mail.send(confirmation_msg)
-
-            print(f"Email sent successfully from {name}")
-            return render_template('contact.html', success=True)
-
-        except Exception as e:
-            print(f"Error sending email: {e}")
-            return render_template('contact.html', success=False, error=str(e))
-
-    return render_template('contact.html')
 
 
 @app.route('/chat', methods=['POST'])
