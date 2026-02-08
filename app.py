@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from flask_mail import Mail, Message
 from openai import OpenAI
 import json
 import os
@@ -8,6 +9,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
+
+# Configure Flask-Mail
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_USER')
+
+mail = Mail(app)
 
 # Initialize OpenAI client
 client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
@@ -22,44 +33,27 @@ def load_cv_data():
 
 cv_data = load_cv_data()
 
-# System prompt for the chatbot
-SYSTEM_PROMPT = f"""You are Amelia, an AI assistant trained on the portfolio owner's CV and experience.
-You have access to the following information about Flavia:
 
-Name: {cv_data['name']}
-Title: {cv_data['title']}
-Bio: {cv_data['bio']}
+def load_system_prompt():
+    """Load and format the system prompt with CV data."""
+    with open('system_prompt.txt', 'r') as f:
+        template = f.read()
 
-Experience:
-{json.dumps(cv_data['experience'], indent=2)}
+    return template.format(
+        name=cv_data['name'],
+        title=cv_data['title'],
+        bio=cv_data['bio'],
+        experience=json.dumps(cv_data['experience'], indent=2),
+        skills=json.dumps(cv_data['skills'], indent=2),
+        projects=json.dumps(cv_data['projects'], indent=2),
+        education=json.dumps(cv_data['education'], indent=2),
+        email=cv_data['contact']['email'],
+        linkedin=cv_data['contact']['linkedin'],
+        github=cv_data['contact']['github']
+    )
 
-Skills:
-{json.dumps(cv_data['skills'], indent=2)}
 
-Projects:
-{json.dumps(cv_data['projects'], indent=2)}
-
-Education:
-{json.dumps(cv_data['education'], indent=2)}
-
-Contact:
-Email: {cv_data['contact']['email']}
-LinkedIn: {cv_data['contact']['linkedin']}
-GitHub: {cv_data['contact']['github']}
-
-You are Amelia, a friendly and approachable AI assistant. You are:
-- Knowledgeable about Flavia's experience and what she can do
-- Warm, personable, and conversational
-- Concise but helpful with information
-- Genuinely interested in Flavia's work and excited to talk about it
-- Ready to answer questions and provide more details if needed
-
-When answering questions:
-- Keep it friendly and natural - like chatting with a friend who knows Flavia well
-- Be clear and direct without being stiff
-- Highlight what Flavia has done and is working on
-- If asked about unrelated stuff, politely bring the conversation back to Flavia's work
-- Use casual, conversational language that feels genuine."""
+SYSTEM_PROMPT = load_system_prompt()
 
 
 @app.route('/')
@@ -90,18 +84,45 @@ def contact():
         subject = request.form.get('subject')
         message = request.form.get('message')
 
-        # TODO: Add email functionality here (e.g., send email using Flask-Mail)
-        # For now, just print to console
-        print(f"New contact form submission:")
-        print(f"Name: {name}")
-        print(f"Email: {email}")
-        print(f"Subject: {subject}")
-        print(f"Message: {message}")
+        try:
+            # Send email to yourself
+            msg = Message(
+                subject=f"New Contact Form Submission: {subject}",
+                recipients=[os.getenv('EMAIL_USER')],
+                body=f"""
+New contact form submission:
 
-        # Could also save to a database here
-        # Or send an email notification to myself
+Name: {name}
+Email: {email}
+Subject: {subject}
 
-        return render_template('contact.html', success=True)
+Message:
+{message}
+                """
+            )
+            mail.send(msg)
+
+            # Send confirmation email to the user
+            confirmation_msg = Message(
+                subject="I received your message!",
+                recipients=[email],
+                body=f"""
+Hi {name},
+
+Thank you for reaching out! I received your message and will get back to you soon.
+
+Best regards,
+Flavia
+                """
+            )
+            mail.send(confirmation_msg)
+
+            print(f"Email sent successfully from {name}")
+            return render_template('contact.html', success=True)
+
+        except Exception as e:
+            print(f"Error sending email: {e}")
+            return render_template('contact.html', success=False, error=str(e))
 
     return render_template('contact.html')
 
@@ -137,4 +158,4 @@ def chat():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=os.getenv('FLASK_ENV') == 'development')
