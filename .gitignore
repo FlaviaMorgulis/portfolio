@@ -1,7 +1,6 @@
 # Python
 __pycache__/
 *.pyc
-cv_data.json
 test_chat.py
 
 # Environment variables
