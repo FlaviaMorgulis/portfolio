@@ -1,92 +1,162 @@
 {
   "name": "Flavia Morgulis",
-  "title": "Tech-Driven Project Manager & Full Stack Developer",
-  "bio": "Tech-driven multilingual professional combining project management, coding, DevOps, and cloud computing expertise to deliver user-focused solutions. Experienced in business startup, operations, product management, and customer-facing roles. Currently pursuing AWS Restart certification. Recognised for analytical thinking, creative problem-solving, and translating business requirements into technical deliverables. Collaborative and adaptable, bridging technical and non-technical teams to ensure clarity, efficiency, and impact.",
+  "title": "Cloud & DevOps-Oriented Software Engineer | Product & Systems Thinker",
+  "bio": "Cloud- and DevOps-focused technical professional with strong software engineering and system design experience. Career changer bringing hands-on experience from startups, operations, and product delivery into building reliable, scalable, and user-centered systems. Skilled in Python, Linux, cloud fundamentals, relational databases, and automation. Known for analytical problem-solving, systems thinking, and translating business requirements into technical solutions with real-world impact. Applies behavior-aware product thinking to reduce user friction and improve workflow reliability.",
+
   "experience": [
     {
       "company": "Group Dynamics",
-      "role": "Manager and Founder",
+      "role": "Founder & Operations Manager",
       "duration": "2023 - 2024",
-      "description": "Established and grew a successful well-being practice focused on meditation and mindfulness. Developed efficient administrative and office processes and procedures, including client onboarding, marketing, diary scheduling, billing, invoicing, and accounting."
+      "description": "Designed and operated end-to-end business systems including client onboarding workflows, scheduling, billing, and reporting. Built and optimized operational processes with a focus on efficiency, data tracking, and scalability. Gained hands-on experience in product thinking, system design, and decision-making under real business constraints."
     },
     {
       "company": "Ruter Public Transport",
-      "role": "Customer Service Advisor",
+      "role": "Operations & Service Advisor",
       "duration": "2022 - 2023",
-      "description": "Worked in a fast-paced contact centre providing advice about services and resolving customer issues. Collaborated with IT to improve system performance and integrate 4 systems. Designed processes for a new customer mobility service. Wrote weekly reports for management providing data and insights on customer complaints and IT improvements. Selected to train new employees."
+      "description": "Collaborated with IT to integrate multiple systems and improve operational workflows. Produced data-driven reports to inform technical improvements and product decisions. Applied systems thinking to process design and delivery of a new mobility service."
     },
     {
       "company": "ISS A/S",
-      "role": "Customer Service and Administration Officer",
+      "role": "Operations & Administration Officer",
       "duration": "2019 - 2021",
-      "description": "Worked in the catering facility at Norway's busiest hospital. Handled customer service, commercial target achievement and supporting administration. Mapped and streamlined operational processes. Assisted manager in winning a 7-year tender by creating detailed reports using multiple sources of data."
+      "description": "Supported large-scale operations with workflow optimization and data-driven reporting. Assisted management in operational decision-making and process documentation. Contributed to securing a major long-term contract by analyzing data and suggesting system improvements."
     },
     {
       "company": "Furu Creamery",
-      "role": "Founder and Manager",
+      "role": "Founder & Product Manager",
       "duration": "2017 - 2019",
-      "description": "Identified market opportunity for plant-based cheese and conducted market research. Developed and implemented ingredient sourcing, product and marketing strategy. Negotiated B2B and B2C sales contracts in Norway and Sweden. Created policies to comply with food production regulations. Managed budgets and coordinated marketing and social media plans."
+      "description": "Led product development from market research to production and distribution. Designed operational processes, managed suppliers, budgets, and contracts. Made data-informed decisions across product, operations, and growth, applying early-stage product thinking."
     }
   ],
+
   "skills": {
-    "languages": ["Python", "SQL", "HTML", "CSS", "JavaScript"],
-    "frameworks": ["Flask", "SQLAlchemy", "Jinja"],
+    "software_engineering": [
+      "Python",
+      "Backend Development",
+      "REST APIs",
+      "Clean Code Principles"
+    ],
+    "cloud_devops": [
+      "Linux",
+      "Docker",
+      "AWS Fundamentals",
+      "CI/CD Concepts",
+      "Infrastructure Automation"
+    ],
+    "databases_data": [
+      "SQL",
+      "Relational Database Design",
+      "SQLAlchemy ORM",
+      "Data Modeling",
+      "Operational Metrics & Logs"
+    ],
+    "web_technologies": ["Flask", "Jinja", "HTML", "CSS", "JavaScript"],
+    "product_delivery": [
+      "Agile & Iterative Delivery",
+      "Product Thinking",
+      "Project Management",
+      "Stakeholder Communication"
+    ],
     "tools": [
       "Git",
       "GitHub",
       "GitHub Projects",
-      "Agile tools",
-      "Docker",
-      "AWS",
+      "Agile Tools",
       "Microsoft Office Suite",
-      "CRM systems"
-    ],
-    "databases": ["SQL", "SQLAlchemy ORM"],
-    "specializations": [
-      "DevOps",
-      "Cloud Computing",
-      "Product Management",
-      "Project Management",
-      "Full-Stack Development"
+      "CRM Systems"
     ]
   },
+
   "projects": [
     {
       "title": "Linux DevOps Python Platform",
-      "description": "Currently under construction. A comprehensive DevOps platform combining Linux, Python, and cloud infrastructure automation. This project demonstrates modern DevOps practices, infrastructure as code, CI/CD pipelines, containerization, and cloud deployment strategies. Focused on building scalable, automated solutions for infrastructure management and application deployment.",
+      "description": "An evolving DevOps-focused platform combining Linux, Python, containerization, and cloud infrastructure concepts. Demonstrates infrastructure automation, CI/CD pipelines, containerized services, and deployment strategies with a focus on scalable and maintainable systems.",
       "technologies": ["Python", "Linux", "Docker", "AWS", "CI/CD", "DevOps"],
       "github": "https://github.com/FlaviaMorgulis/linux-devops-python-platform",
       "demo": ""
     },
     {
       "title": "System Monitoring & Log Analysis Tool",
-      "description": "Python tool for real-time Linux system monitoring and log analysis. Tracks CPU, memory, disk, and network metrics with alert systems for anomalies. Features intelligent pattern detection in logs, anomaly alerts, and a Flask web dashboard for visualizing system health and metrics. Demonstrates strong Python skills, Linux system administration knowledge, and data analysis capabilities.",
+      "description": "Python-based system monitoring and log analysis tool for Linux environments. Collects CPU, memory, disk, and network metrics and surfaces anomalies through alerts and dashboards. Demonstrates systems thinking, operational awareness, and data-driven troubleshooting.",
       "technologies": [
         "Python",
         "Linux",
         "Flask",
-        "Data Analysis",
-        "System Administration"
+        "System Monitoring",
+        "Data Analysis"
       ],
       "github": "",
       "demo": ""
     },
     {
-      "title": "Financial Tracking App",
-      "description": "Led a small team of developers in designing and implementing a financial tracking web application using Agile methodology. Designed and implemented the database schema using SQLAlchemy, defining data models, relationships, and integration with Flask backend APIs. Contributed to front-end development with HTML, CSS, and JavaScript, ensuring seamless data flow between client and server. Built a secure, user-friendly, and scalable application demonstrating full-stack development principles.",
+      "title": "Financial Tracking Web Application",
+      "description": "Full-stack web application built with Flask and SQLAlchemy. Designed relational database schemas, backend APIs, and user-facing interfaces. Led development using Agile practices, focusing on data integrity, security, and maintainability.",
       "technologies": [
         "Flask",
         "SQLAlchemy",
-        "Jinja",
+        "SQL",
         "HTML",
         "CSS",
-        "JavaScript",
-        "SQL"
+        "JavaScript"
       ],
       "github": "https://github.com/FlaviaMorgulis/financial-tracking-app",
       "demo": ""
     }
   ],
+
+  "experimental_projects": [
+    {
+      "name": "DevOps & Linux Labs",
+      "description": "Small experiments exploring Linux internals, containerization, automation scripts, and cloud deployment workflows. Used to validate concepts before applying them to production-style projects.",
+      "skills_demonstrated": [
+        "Linux",
+        "Bash",
+        "Docker",
+        "Infrastructure Thinking",
+        "Debugging and Troubleshooting"
+      ]
+    }
+  ],
+
+  "continuous_learning": {
+    "focus_areas": [
+      "Cloud architecture and system design",
+      "DevOps practices, automation, and reliability",
+      "Backend engineering and data modeling",
+      "Product thinking for technical teams",
+      "Behavior-aware design for user-centered systems"
+    ],
+    "books": [
+      {
+        "title": "The Phoenix Project",
+        "why_it_matters": "Understanding DevOps culture, bottlenecks, and systems thinking"
+      },
+      {
+        "title": "Designing Data-Intensive Applications",
+        "why_it_matters": "Learning how scalable systems handle data, reliability, and trade-offs"
+      }
+    ],
+    "learning_style": "Hands-on, project-based learning combined with conceptual study"
+  },
+
+  "professional_focus": {
+    "primary_tracks": [
+      "DevOps and Cloud Engineering",
+      "Software Engineering (Backend & Systems)",
+      "Solutions Architecture"
+    ],
+    "secondary_tracks": ["Product Management", "Technical Project Delivery"],
+    "positioning_statement": "A career-changing technologist with strong business and operational experience, focused on building reliable, scalable systems and product-aware technical solutions."
+  },
+
+  "interests": [
+    "Systems thinking and process optimization",
+    "Understanding how software systems fail and how to design for resilience",
+    "Learning through building and experimentation",
+    "Cross-disciplinary thinking between business, product, and engineering"
+  ],
+
   "education": [
     {
       "school": "AWS",
@@ -96,14 +166,14 @@
     },
     {
       "school": "NCFE",
-      "degree": "Level 3 in Coding Practices",
-      "field": "Computer Science",
+      "degree": "Level 3 Certificate",
+      "field": "Coding Practices",
       "graduationYear": 2025
     },
     {
       "school": "NCFE",
-      "degree": "Level 2 in Understanding Coding",
-      "field": "Computer Science",
+      "degree": "Level 2 Certificate",
+      "field": "Understanding Coding",
       "graduationYear": 2024
     },
     {
@@ -113,9 +183,9 @@
       "graduationYear": 2019
     }
   ],
+
   "contact": {
     "email": "flaviaefmorgulis@gmail.com",
-    "phone": "+447783085438",
     "linkedin": "https://www.linkedin.com/in/flavia-morgulis-418579221/",
     "github": "https://github.com/FlaviaMorgulis"
   }
