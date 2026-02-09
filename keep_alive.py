@@ -1,8 +1,8 @@
 """
 Standalone Keep-Alive Script for Render Free Tier
 
-This script pings your Render app periodically to prevent it from sleeping.
-You can run this locally, on another server, or use a service like:
+This script pings Render app periodically to prevent it from sleeping.
+Can be runed this locally, on another server, or use a service like:
 - GitHub Actions (free cron jobs)
 - cron-job.org (free external cron service)
 - PythonAnywhere (free tier allows scheduled tasks)
@@ -11,7 +11,7 @@ Usage:
     python keep_alive.py
 
 Environment Variables:
-    RENDER_APP_URL - Your Render app URL (e.g., https://your-app.onrender.com)
+    RENDER_APP_URL - Render app URL (e.g., https://your-app.onrender.com)
 """
 
 import requests
@@ -19,7 +19,7 @@ import time
 import os
 from datetime import datetime
 
-# Configure your Render app URL here
+# Configure Render app URL here
 RENDER_APP_URL = os.getenv('RENDER_APP_URL', 'https://your-app.onrender.com')
 PING_INTERVAL_MINUTES = 14  # Render sleeps after 15 minutes of inactivity
 
