@@ -40,7 +40,7 @@ if os.getenv('FLASK_ENV') == 'production' or os.getenv('RENDER'):
 
 
 def load_cv_data():
-    with open('cv_data.json', 'r') as f:
+    with open('cv_data.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
 
@@ -49,7 +49,7 @@ cv_data = load_cv_data()
 
 def load_system_prompt():
     """Load and format the system prompt with CV data."""
-    with open('system_prompt.txt', 'r') as f:
+    with open('system_prompt.txt', 'r', encoding='utf-8') as f:
         template = f.read()
 
     return template.format(
